@@ -10,7 +10,7 @@ function App() {
   }, [lang]);
 
   return (
-    <div className="container" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div className="container" dir="ltr">
       <header className="navbar">
         <h1>{lang === "ar" ? "نبض الذكاء" : "AI Pulse"}</h1>
         <button onClick={() => setLang(lang === "ar" ? "en" : "ar")}>
