@@ -1,26 +1,103 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #f9f9f9;
+  direction: rtl; /* لأن اللغة العربية هي الافتراضية */
 }
+
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
 }
-header {
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
 }
-button {
-  padding: 5px 10px;
+
+.navbar h1 {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
 }
+
+.navbar button {
+  padding: 6px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar button:hover {
+  background: #0056b3;
+}
+
+.category-tabs {
+  margin: 20px 0;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.category-tabs button {
+  border: 2px solid;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.category-tabs button:hover {
+  background: #ddd;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .card {
   background: white;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  border-left: 6px solid #2196F3;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* دعم اللغة الإنجليزية لاتجاه النص */
+body[dir="ltr"] {
+  direction: ltr;
 }
