@@ -1,15 +1,3 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-
-const categories = {
-  news: { ar: "أخبار", en: "News", color: "#f44336" },
-  tech: { ar: "تقنية", en: "Technology", color: "#2196F3" },
-  health: { ar: "الصحة", en: "Health", color: "#4CAF50" },
-  culture: { ar: "ثقافة عامة", en: "Culture", color: "#FF9800" },
-  religion: { ar: "ديني", en: "Religion", color: "#9C27B0" },
-  ai: { ar: "ذكاء اصطناعي", en: "AI", color: "#009688" },
-};
-
 function App() {
   const [lang, setLang] = useState("ar");
   const [articles, setArticles] = useState({});
@@ -22,14 +10,12 @@ function App() {
   }, [lang]);
 
   return (
-    <div className="container">
+    <div className="container" dir={lang === "ar" ? "rtl" : "ltr"}>
       <header className="navbar">
         <h1>{lang === "ar" ? "نبض الذكاء" : "AI Pulse"}</h1>
-        <div>
-          <button onClick={() => setLang(lang === "ar" ? "en" : "ar")}>
-            {lang === "ar" ? "English" : "عربي"}
-          </button>
-        </div>
+        <button onClick={() => setLang(lang === "ar" ? "en" : "ar")}>
+          {lang === "ar" ? "English" : "عربي"}
+        </button>
       </header>
 
       <nav className="category-tabs">
@@ -69,4 +55,3 @@ function App() {
   );
 }
 
-export default App;
