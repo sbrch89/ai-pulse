@@ -98,6 +98,6 @@ footer {
 }
 
 /* دعم اللغة الإنجليزية لاتجاه النص */
-body[dir="ltr"] {
-  direction: ltr;
+body[dir="ltr"]
+{
 }
